@@ -24,15 +24,19 @@ University.prototype.addStudent = function(student) {
     this.students.push(student);
 }
 
+University.prototype.removeStudent = function(student) {
+    this.students.pop(student);
+}
+
 
 
 
 
 University.prototype.displayStudents = function() {
     console.log("Studentet ne universitetin tone jane: ");
-    for(var i = 0;i < this.Student.length; i++) {
+    for(var i = 0;i < this.students.length; i++) {
         console.log("Students:" + (i + 1) + " : ");
-        this.Student[i].displayDetails();
+        this.students[i].displayDetails();
     }
 }
 
